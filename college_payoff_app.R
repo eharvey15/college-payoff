@@ -25,7 +25,9 @@ response_choices <-
 
 
 #load the data
-df <- readRDS("df.rds")
+df <- read.csv2("https://raw.githubusercontent.com/eharvey15/college-payoff/master/college_data.csv")
+
+
 
 #convert deomgraphic data to percentages
 df$pct_minority <- df$`Total Minority`/df$total_enrollment
