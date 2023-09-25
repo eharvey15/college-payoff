@@ -5,6 +5,7 @@ library(tidyverse)
 library(usdata)
 library(plotly)
 library(ggpubr)
+library(shinythemes)
 
 
 #named vectors for explanatory and response variables
@@ -38,6 +39,7 @@ df$region <- setNames(state.region, state.name)[df$state]
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
+  theme = shinytheme("superhero"),
   
   # Application title
   titlePanel("Payoff of College"),
@@ -161,3 +163,4 @@ server <- function(input, output) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
+
